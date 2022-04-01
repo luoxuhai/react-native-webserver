@@ -137,11 +137,9 @@ RCT_EXPORT_METHOD(respond: (NSString *) requestId
     NSData* data = [body dataUsingEncoding:NSUTF8StringEncoding];
     GCDWebServerDataResponse* response = [[GCDWebServerDataResponse alloc] initWithData:data contentType:type];
     response.statusCode = code;
-    if ([type isEqualToString:@"POST"] || [type isEqualToString:@"PUT"] || [type isEqualToString:@"DELETE"]){
-        [response setValue:@"*" forAdditionalHeader:(@"Access-Control-Allow-Origin")];
-        [response setValue:@"*" forAdditionalHeader:(@"Access-Control-Allow-Headers")];
-        [response setValue:@"*" forAdditionalHeader:(@"Access-Control-Allow-`Methods`")];
-    }
+    [response setValue:@"*" forAdditionalHeader:(@"Access-Control-Allow-Origin")];
+    [response setValue:@"*" forAdditionalHeader:(@"Access-Control-Allow-Headers")];
+    [response setValue:@"*" forAdditionalHeader:(@"Access-Control-Allow-`Methods`")];
     response.gzipContentEncodingEnabled = NO;
 
     GCDWebServerCompletionBlock completionBlock = nil;

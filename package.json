@@ -1,6 +1,6 @@
 {
   "name": "@react-native-library/webserver",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple HTTP server for React Native apps",
   "main": "index.js",
   "types": "index.d.ts",
@@ -17,7 +17,7 @@
     "server",
     "bridge"
   ],
-  "author": "luoxuhai <15186743693@163.com> (https://github.com/luoxuhai)",
+  "author": "luoxuhai <darkce97@gmail.com> (https://github.com/luoxuhai)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/luoxuhai/react-native-webserver/issues"
